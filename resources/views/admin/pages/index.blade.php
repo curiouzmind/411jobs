@@ -52,7 +52,7 @@
                           @foreach ($posts as $post)
                             <tr>
                                 <td>{{$post->title}}</td>
-                                <td><span>google</span>, <span>programme management</span>, <span>lagos</span></td>
+                                <td> @foreach($post->tags as $tag)<span> {{$tag->name}}</span>,@endforeach</td>
                                 <td>Bolaji Alade</td>
                                 <td>{{ $post->active ? 'Published' : 'Draft' }}</td>
                                 <td>{{$post->created_at}}</td>

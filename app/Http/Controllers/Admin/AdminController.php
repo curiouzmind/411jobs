@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Post;
 use App\Tag;
 use App\State;
+use App\Category;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -34,9 +35,11 @@ class AdminController extends Controller
      */
     public function create()
     {
-        $tags=Tag::lists('name','id');
-        $stateList= State::lists('name','id');
-        return view('admin.pages.compose',compact('tags','stateList'));
+        $comp=Post::lists('company_name','company_name');
+        $cat =Category::lists('name','name');
+        $tags=Tag::lists('name','name');
+        $stateList= \DB::table('statess')->lists('name','name');
+        return view('admin.pages.compose',compact('comp','stateList','tags','cat'));
     }
 
     /**
@@ -47,6 +50,7 @@ class AdminController extends Controller
      */
     public function store(PostCreateRequest $request)
     {
+        //dd(\Input::all());
         $post= new Post();
         $post->title =$request->get('title');
         $post->company_name=$request->get('company');
@@ -56,17 +60,55 @@ class AdminController extends Controller
         $post->job_description=$request->get('job_description');
         $post->job_experience=$request->get('job_experience');
         $post->company_description=$request->get('company_description');
+        $post->salary=$request->get('salary');
         $publish=$request->get('publish');
         $save=$request->get('save');
+        $state=$request->get('location');
+        $cat=$request->get('category');
+        $tags=$request->get('tags');
+         $tagNames= [];
+                 foreach ($tags as $tag) {
+                     if( $existingTag = Tag::where('name', $tag)->first()) {
+                     $TagNames[]= $existingTag;
+                         }
+                  else{
+                     $newTag = new Tag();
+                     $newTag ->name  = $tag;
+                     $newTag->save();
+                 $TagNames[]=$newTag;
+                    }
+                 }
 
         if(isset($publish)) {
             $post->active=1;
              $post->save();
+              $post->tags()->saveMany($TagNames);
+              $newCat=new Category();
+              $newCat->name= $cat;
+              $newCat->post_id=$post->id;
+              $newCat->save();
+            // $post->tags()->sync($tag);
+            $sta= new State();
+            $sta->name=$state;
+            $sta->post_id=$post->id;
+            $sta->save();
+
             return redirect('admin')
              ->withSuccess("New job has been published");
         } else if(isset($save)) {
              $post->active=0;
              $post->save();
+              $post->tags()->saveMany($TagNames);
+              $newCat=new Category();
+              $newCat->name= $cat;
+              $newCat->post_id=$post->id;
+              $newCat->save();
+            // $post->tags()->sync($tag);
+            $sta= new State();
+            $sta->name=$state;
+            $sta->post_id=$post->id;
+            $sta->save();
+
              return redirect('/admin')
              ->withErrors("The post has been saved for publishing later");
 

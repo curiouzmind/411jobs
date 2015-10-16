@@ -22,8 +22,12 @@ class Post extends Model
  		 return $this->belongsToMany('App\Tag','post_tag_pivot');
 	}
 
-	public function states()
+	public function state()
 	{
- 		 return $this->belongsToMany('App\State','post_state_pivot');
+ 		 return $this->belongsTo('App\State');
+	}
+	public function category()
+	{
+ 		 return $this->belongsTo('App\Category');
 	}
 }

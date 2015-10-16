@@ -41,7 +41,8 @@
                     <div class="panel-body">
                         <label for="company" class="col-lg-2 control-label p0-left"><i class="fa fa-building"></i> Company Name</label>
                         <div class="col-lg-10">
-                          <input type="text" class="form-control" id="companyName" name="company"  value="{{old('company')}}" placeholder="Enter company's name">
+                          {!!Form::select('company', $comp,null,['class'=>'form-control', 'id'=>'comp',
+                                 'placeholder'=>'Select/Create Company Name']) !!}
                         </div>
                     </div>
                   </div>
@@ -57,7 +58,7 @@
                           <div class="form-group">
                             <label for="category" class="col-lg-2 control-label">Sector</label>
                             <div class="col-lg-10">
-                              {!!Form::select('category', $tags,null,['class'=>'form-control', 'id'=>'category',
+                              {!!Form::select('category', $cat,null,['class'=>'form-control', 'id'=>'category',
                                  'placeholder'=>'Select Category']) !!}
                             </div>
                           </div>    
@@ -131,6 +132,15 @@
 
                           </div>
                         </div>
+
+                         <div class="form-group">
+                            <label for="location" class="col-lg-2 control-label">Add Tags</label>
+                            <div class="col-lg-10">
+                              {!!Form::select('tags[]', $tags, null, ['class'=>'form-control','multiple',
+                                'id'=>'tags']) !!}
+                            </div>
+                          </div>
+
                         <div class="form-group">
                       <ul class="list-inline">
                         <input type="submit" name="publish" class="btn btn-danger"  value="Publish" />
@@ -176,12 +186,25 @@
 
       $("#category").select2({
         tags: true,
+        placeholder:'select/create Category',
 
       }); 
-    //  $(document).ready(function() {
+   
       $("#stateList").select2({
+        placeholder:'Select State',
       });
-   // });
+
+       $("#comp").select2({
+        tags:true,
+        placeholder:'Select/create Company name',
+      });
+
+        $("#tags").select2({
+        tags: true,
+        placeholder:'select/create Tags',
+
+      }); 
+   
     });
         $(document).ready(function() {
 

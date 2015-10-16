@@ -29,7 +29,8 @@ class PostCreateRequest extends Request
             'category'     => 'required',
             'location'     => 'required',
             'closing'      => 'required',
-            'job_description' => 'required'
+            'job_description' => 'required',
+            'salary'        => 'numeric'
      ];
     }
 }

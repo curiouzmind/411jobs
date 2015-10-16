@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class State extends Model
+class Category extends Model
 {
-    protected $table= 'states';
+    protected $table= 'categories';
 	public $timestamps = false;
 	protected $fillable = ['name','post_id'];
 
 
-	public function post()
+	public function posts()
 	{
 		return $this->hasMany('App\Post');
 	}
