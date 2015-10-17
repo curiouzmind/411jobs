@@ -7,15 +7,29 @@
 /* BODY */
  body {
  	font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
- 	padding-top: 40px;
+ 	padding-top: 60px;
+ }
+ .h2-xs {
+ 	font-size: 33px;
  }
  @media (min-width: 768px) {
   	body {
  		padding-top: 70px;
  	}
+ 	.h2-md {
+ 		font-size: 45px;
+ 	}
+}
+a:focus,
+a:hover {
+	color: #e51c23;
 }
 a:focus {
 	outline: none;
+}
+.card__share a:focus,
+.card__share a:hover {
+	text-decoration: none;
 }
 
  /* top-navigation */
@@ -39,17 +53,168 @@ a:focus {
   		text-align: center;
   		margin: auto;
   }
-  @media(max-width: 768px) {
- 
+  @media(max-width: 767px) {
+ 	.post-cards {
+ 		margin: 0 15px;
+ 	}
   }
- /* content-navigation */
 
+/* MAIN-CONTENT */
+.main-content {
+	margin-bottom: 50px;
+}
+ /* content-navigation */
+ .navbar-header form.navbar-form {
+ 	margin-left: -10px;
+ }
+ .navbar-header form input.form-control {
+ 	width: 70%;
+ }
+ .navbar-header form.navbar-form .form-group {
+ 	width: 100%;
+ }
  /*Main-content*/
  .main-content .post-cards {
  	min-height: 400px;
  }
 
+ /*New Post page*/
+ @media(min-width: 768px){
+	 .post-title-bar input#postTitle {
+	 	width: 60%;
+	 }
+ }
+
  /*POST-CARDS*/
+ .ad-bar3 {
+ 	margin-top: -10px;
+ 	margin-bottom: 40px;
+ 	padding: 0 100px;
+ }
+
+ /*Single-Post page*/
+ #single-post .post-card-img {
+ 	height: 100px;
+ }
+ #single-post .post-card-img .card__image p.recruiter-name {
+ 	padding: 20px 15px;
+ 	text-align: left;
+ }
+/* Icon when the collapsible content is hidden */
+ .panel-title a.icon-collapsed:after {
+	font-family: "Glyphicons Halflings";
+    content: "\e080";
+}
+ /* Icon when the collapsible content is shown */
+ .panel-title a:after {
+    font-family: "Glyphicons Halflings";
+    float: right;
+    content: "\e114";
+}
+
+ /* pagination */
+ .pagination > .active > a, 
+ .pagination > .active > span, 
+ .pagination > .active > a:hover, 
+ .pagination > .active > span:hover, 
+ .pagination > .active > a:focus, 
+ .pagination > .active > span:focus {
+ 	background-color: #e51c23;
+	border-color: #e51c23;
+ }
+ .pagination > li > a, 
+ .pagination > li > span {
+ 	color: #e51c23;
+ }
+ .pagination > li > a:hover, 
+ .pagination > li > span:hover, 
+ .pagination > li > a:focus, 
+ .pagination > li > span:focus {
+ 	color: #e51c23;
+ }
+
+ /* Sidebar */
+ .subscribe-box {
+ 	position: sticky;
+	top: 44px;
+	z-index: 9999;
+	bottom: 0;
+ }
+ .content-sidebar .panel .list-group a {
+ 	height: 70px;
+ 	margin: 4px 0;
+ }
+ .content-sidebar .panel .list-group a p.sb-recruiter-name {
+ 	float: left;
+	display: inline-block;
+	background-color: #DDD;
+	color: #333;
+	height: 69px;
+	width: 69px;
+	margin-right: 10px;
+	padding: 19px 10px;
+	text-align: center;
+	margin-bottom: 0px;
+	line-height: 14px;
+ }
+ .content-sidebar .panel .list-group a p.sb-recruiter-name i {
+ 	display: block;
+ }
+  .more-jobs-carousel h5,
+  .more-jobs-carousel h6,
+  .more-jobs-carousel p span,
+  .content-sidebar .panel .list-group a h4,
+  .content-sidebar .panel .list-group a p span,
+  .content-sidebar .panel .list-group a p.sb-recruiter-name {
+  	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  }
+ .content-sidebar .panel .list-group a p a.list-group-item {
+ 	display: inline-block;
+ }
+ .content-sidebar .panel .list-group a p span {
+ 	max-width: 136px;
+ }
+ @media(min-width: 768px) {
+ 	 .content-sidebar .panel .list-group a p span {
+	 	max-width: 162px;
+	 }
+ }
+ .fb-plugin h4 {
+ 	color:#fff;
+ }
+ .ad-bar1 img,
+ .ad-bar2 img {
+ 	width: 100%;
+ 	height: auto;
+ }
+
+ /*content more jobs carousel*/
+ .more-jobs-carousel h5,
+  .more-jobs-carousel h6,
+  .more-jobs-carousel p span {
+  	color: 
+  }
+
+  .more-jobs-employer #owl-demo .item {min-height: 100px;}
+
+  .more-jobs-employer .more-jobs-carousel h6.job-title,
+  .more-jobs-role .more-jobs-carousel h6.job-title {
+  	display: block;
+	  /* Fallback for non-webkit */
+	  display: -webkit-box;
+	  display: -moz-box;
+	  height: 32.2px;
+	  /* Fallback for non-webkit */
+	  -webkit-line-clamp: 2;
+	  -moz-line-clamp: 2;
+	  -webkit-box-orient: vertical;
+	  -moz-box-orient: vertical;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  white-space: normal;
+  }
 
  /**
  * Helpers
@@ -87,6 +252,9 @@ a:focus {
 	.post-card-img {
 		height: 221px;
 		overflow: hidden;
+		 -webkit-transition: height 0.6s ease;
+		  -o-transition: height 0.6s ease;
+		  transition: height 0.6s ease;
 	}
  
 .card__image {
@@ -106,6 +274,19 @@ a:focus {
 		display: block;
 		height: 100%;
 	}
+	 @media(max-width: 767px) {
+	 	.post-card-img {
+	 		height: 50px;
+	 		 -webkit-transition: height 0.6s ease;
+			  -o-transition: height 0.6s ease;
+			  transition: height 0.6s ease;
+	 	}
+	 	.card__image p.recruiter-name {
+	 		padding: 10px;
+			font-size: 33px;
+			text-align: left;
+	 	}
+	 }
 
 .card__content {
 	position: relative;
@@ -203,7 +384,11 @@ a:focus {
 	.share-toggle.share-expanded:before {
 		content: "\f00d";
 	}
-
+a.apply-circle {
+	background-color: #E51C23;
+	color: #fff !important;
+}
+.apply-circle,
 .like-icon,
 .share-icon {
 	display: inline-block;
@@ -220,6 +405,8 @@ a:focus {
 	  		0 2px 4px rgba(0,0,0, 0.12),
 	    	0 2px 4px rgba(0,0,0, 0.24);
 }
+	.apply-circle:hover,
+	.apply-circle:focus,
 	.like-icon:hover,
 	.like-icon:focus,
 	.share-icon:hover,
@@ -260,13 +447,57 @@ a:focus {
 
  /* POST-CARDS ENDS */
 
+ /* Footer */
+ footer .footer2 p.site-credit a {
+ 	color: #666;
+ }
+
+/* plugins */
+
+/*owl-carousel*/
+	#owl-demo .item{
+	  background: inherit;
+		border: 1px solid #DDD;
+		margin: 10px;
+		color: #333 !important;
+		border-radius: 3px;
+		text-align: left;
+		padding: 0px 6px;
+		min-height: 120px;
+	}
+	.item a:hover {
+		text-decoration: none;
+	}
+	#owl-demo .item h1{color: #fff;}
+	.customNavigation{
+	  text-align: center;
+	}
+	//use styles below to disable ugly selection
+	.customNavigation a{
+	  -webkit-user-select: none;
+	  -khtml-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	}
+/*facebook plugin*/
+.fb-comment {
+	height: 185px;
+}
+
 /* general utilities*/
+.bg-white {background-color: #fff !important;}
+.white {color: #fff !important;}
+
 .m0 {margin: 0;}
 .m5 {margin: 5;}
 .m10 {margin: 10;}
+.m20 {margin: 20;}
 .p0 {padding: 0;}
 .p5 {padding: 5px !important;}
 .p10 {padding: 10px;}
+.p20 {padding: 20px;}
 
 .m0-bttm { margin-bottom: 0px; }
 .m0-top { margin-top: 0px; }
