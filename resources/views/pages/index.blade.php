@@ -5,8 +5,7 @@
 
 @section('sub-title')
   <div class="col-md-12">
-
-               <h2 class="m0-top">{{ config('blog.title') }}</h2>
+    <h2 class="m0-top">{{ config('blog.title') }}</h2>
   </div>
 @stop
 @section('content')
@@ -40,7 +39,7 @@
                                 <article class="card__article">
                                   <h3 class="m5-top"><a href="/blog/{{ $post->slug }}">{{ $post->title}}</a></h3>
 
-                                  <p class="m0-bttm">{{ str_limit($post->content) }} </p>
+                                  <p class="m0-bttm">{{ str_limit($post->job_descrption) }} </p>
                                 </article>
                       </div>
                       <div class="card__action">                        

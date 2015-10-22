@@ -1,9 +1,8 @@
 @extends('master')
 
 @section('styles')
-   <!-- <link href="{{asset('plugins/datatable/css/datatables.css')}}" rel="stylesheet">
-    <link href="{{asset('plugins/datatable/css/dataTables.bootstrap.css')}}" rel="stylesheet"> -->
-    <link href="{{asset('css/datatable.min.css')}}" rel="stylesheet">
+    <link href="https://cdn.datatables.net/r/bs/dt-1.10.9,af-2.0.0,b-1.0.3,b-colvis-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,sc-1.3.0/datatables.min.css" rel="stylesheet">
+    <link href="{{asset('//cdn.datatables.net/1.10.9/css/dataTables.bootstrap.css')}}" rel="stylesheet">
 
 @stop
 
@@ -37,7 +36,7 @@
                   <div id="posts" class="tab-pane fade active in">
                     @include('admin.partials.errors')
                      @include('admin.partials.success')
-                    <table id="table_id" class="display">
+                    <table id="table_id" class="display table-hover table-condensed">
                         <thead>
                             <tr>
                                 <th>Post Title</th>
@@ -58,9 +57,8 @@
                                 <td>{{$post->created_at}}</td>
                                 <td><span class="btn btn-sm fa fa-pencil"></span><span class="btn btn-sm fa fa-eye"></span><span class="btn btn-sm fa fa-trash"></span></td>
                             </tr>
-            
-                        </tbody>
-                        @endforeach
+                           @endforeach
+                        </tbody>                       
                     </table>
                   </div>
                   <di id="settings" class="tab-pane fade"><p>hi</p></div>
@@ -71,22 +69,16 @@
 
   @endsection
 @section('script')
- <script src="{{asset('plugins/datatable/js/datatables.js')}}"></script>
+ <script src="https://cdn.datatables.net/r/bs/dt-1.10.9,af-2.0.0,b-1.0.3,b-colvis-1.0.3,b-html5-1.0.3,b-print-1.0.3,r-1.0.7,sc-1.3.0/datatables.min.js"></script>
   <script src="{{asset('plugins/bootstrap-editable/bootstrap-editable.min.js')}}"></script>
       <script type="text/javascript">
           // datatables
           $(document).ready( function () {
-              $('#table_id').DataTable({
-                order: [[0, "desc"]]
-              });
+              $('#table_id').DataTable();
           });
           // tooltip
           $(document).ready(function(){
               $('[data-toggle="tooltip"]').tooltip(); 
-          });
-          // tinymce
-          $(document).ready(function(){
-            tinymce.init({selector:'textarea.textArea'});
           });
       </script>
   @stop

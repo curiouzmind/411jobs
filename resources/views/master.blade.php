@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}" media="screen">
+    <link rel="stylesheet" href="{{asset('/plugins/owl.carousel/owl-carousel/owl.carousel.css')}}" media="screen">
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     @yield('styles')
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -63,7 +64,7 @@
     <!-- page wrapper ends -->
 
     <script src="{{asset('bower_components/jquery/dist/jquery.js')}}"></script>
-   <script src ="{{asset('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <script src ="{{asset('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('plugins/owl.carousel/owl-carousel/owl.carousel.min.js')}}"></script>
     <script src="{{asset('js/custom.js')}}"></script>
     @yield('script')

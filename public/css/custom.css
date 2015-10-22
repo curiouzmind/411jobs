@@ -20,6 +20,9 @@
  		font-size: 45px;
  	}
 }
+input.form-control {
+	border-bottom:1px solid #A2A2A2 !important;
+}
 a:focus,
 a:hover {
 	color: #e51c23;
@@ -53,11 +56,33 @@ a:focus {
   		text-align: center;
   		margin: auto;
   }
+  .navbar-default .navbar-nav > li {
+  	font-size: 18px;
+  }
   @media(max-width: 767px) {
  	.post-cards {
  		margin: 0 15px;
  	}
   }
+  .dropdown-menu li a:hover,
+  .dropdown-menu li a:focus {
+	    text-decoration: none;
+	    color: #fff;
+	    background-color: #E51C23;
+	}
+	.navbar-default .navbar-nav > li > a:hover, 
+	.navbar-default .navbar-nav > li > a:active, 
+	.navbar-default .navbar-nav > li > a:focus {
+	    color: #fff;
+	    background-color: #E51C23;
+	}
+	.navbar-default .navbar-nav > .active > a, 
+	.navbar-default .navbar-nav > .active > a:hover, 
+	.navbar-default .navbar-nav > .active > a:focus {
+	    color: #E51C23;
+		background-color: #fff;
+		border-top: solid 2px #E51C23;
+	}
 
 /* MAIN-CONTENT */
 .main-content {
@@ -77,6 +102,7 @@ a:focus {
  .main-content .post-cards {
  	min-height: 400px;
  }
+
 
  /*New Post page*/
  @media(min-width: 768px){
@@ -160,6 +186,9 @@ a:focus {
  .content-sidebar .panel .list-group a p.sb-recruiter-name i {
  	display: block;
  }
+  .content-sidebar .panel .list-group a h4 {
+  	font-size: 20px;
+  }
   .more-jobs-carousel h5,
   .more-jobs-carousel h6,
   .more-jobs-carousel p span,
@@ -249,6 +278,9 @@ a:focus {
 .card__padding {
 	padding: 1.6rem;
 }
+	.single-page .post-card-img {
+		height: 178px;
+	}
 	.post-card-img {
 		height: 221px;
 		overflow: hidden;
@@ -398,6 +430,7 @@ a.apply-circle {
 	text-align: center;
 	border-radius: 50%;
 	background-color: #fff;
+	margin-right: 5px;
 	transition: all 0.3s ease;
 	outline: 0;
 
@@ -446,6 +479,17 @@ a.apply-circle {
 
 
  /* POST-CARDS ENDS */
+
+/*Select 2*/
+.select2-container .select2-selection--single {
+    height: 35px !important;
+}
+.select2-selection__rendered {
+    line-height: 35px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 35px;
+}
 
  /* Footer */
  footer .footer2 p.site-credit a {

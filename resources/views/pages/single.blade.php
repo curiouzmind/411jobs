@@ -10,7 +10,7 @@
 @stop
 
 @section('content')
-<div class="col-md-8 post-cards">
+<div id="single-post" class="col-md-8 post-cards single-page">
                 <!-- post-card 1 -->
                 <div class="post-card">
                     <div class="row">
@@ -53,17 +53,36 @@
                                 </div>
                                 
                                 <article class="card__article p20-top">
+                                  <!-- Overview -->
+                                  <div class="well row">
+                                    <h5 class="m0-top">Overview</h5>
+                                    <div class="col-md-6">
+                                      <ul class="list-unstyled">
+                                        <li><span class="bold m10-right"><strong>Location:</strong></span>Lagos</li>
+                                        <li><span class="bold m10-right"><strong>Job Role :</strong></span>Programme Management</li>
+                                        <li><span class="bold m10-right"><strong>Job Type :</strong></span>Experienced</li>
+                                        <li><span class="bold m10-right"><strong>Job Sector :</strong></span>IT/Telecommunication</li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <ul class="list-unstyled">                                        
+                                        <li><span class="bold m10-right"><strong>Posted :</strong></span>10 Oct 2015</li>
+                                        <li><span class="bold m10-right"><strong>Closing :</strong></span>20 Jan 2016</li>
+                                        <li><span class="bold m10-right"><strong>Salary :</strong></span>N100,000 - N150,000</li>
+                                      </ul>
+                                    </div>
+                                  </div>
                                   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                     <!-- job description -->
                                     <div class="panel panel-default">
                                       <div class="panel-heading bg-white" role="tab" id="headingOne">
                                         <h4 class="panel-title">
-                                          <a role="button" class="icon-collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                          <a role="button" class="icon-collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                             <i class="fa fa-newspaper-o fa-2x"></i> Job Description
                                           </a>
                                         </h4>
                                       </div>
-                                      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                      <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                         <div class="panel-body">
                                          {{$post->content}}
                                         </div>
@@ -121,12 +140,12 @@
                 </div> 
                 <!-- jobs with same employer -->
                 <div class="panel panel-default">
-                  <div class="panel-heading bg-white">
-                    <h4 class="panel-title pull-left">More Jobs @ Google</h4>
-                    <div class="customNavigation pull-right">
+                  <div class="panel-heading bg-white m20-bttm">
+                    <legend class="panel-title pull-left">More Jobs @ Google</legend>
+                    <!-- <div class="customNavigation pull-right">
                       <a class="prev"><i class="fa fa-angle-double-left fa-2x"></i></a>
                       <a class="next"><i class="fa fa-angle-double-right fa-2x"></i></a>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="panel-body more-jobs-employer">
                     <div id="owl-demo" class="owl-carousel owl-theme">
@@ -167,31 +186,47 @@
                 </div>
                 <!-- jobs with similar roles -->
                 <div class="panel panel-default">
-                  <div class="panel-heading bg-white">
-                    <h4 class="panel-title pull-left">Similar Jobs</h4>
-                    <div class="customNavigation pull-right">
-                      <a class="prev2"><i class="fa fa-angle-double-left fa-2x"></i></a>
-                      <a class="next2"><i class="fa fa-angle-double-right fa-2x"></i></a>
-                    </div>
+                  <div class="panel-heading bg-white m20-bttm">
+                    <legend class="panel-title pull-left">Jobs With Similar Roles</legend>
+                    <!-- <div class="customNavigation pull-right">
+                      <a class="prev"><i class="fa fa-angle-double-left fa-2x"></i></a>
+                      <a class="next"><i class="fa fa-angle-double-right fa-2x"></i></a>
+                    </div> -->
                   </div>
-                  <div class="panel-body">
+                  <div class="panel-body more-jobs-employer">
                     <div id="owl-demo2" class="owl-carousel owl-theme">
-                      <div class="item"><h1>1</h1></div>
-                      <div class="item"><h1>2</h1></div>
-                      <div class="item"><h1>3</h1></div>
-                      <div class="item"><h1>4</h1></div>
-                      <div class="item"><h1>5</h1></div>
-                      <div class="item"><h1>6</h1></div>
-                      <div class="item"><h1>7</h1></div>
-                      <div class="item"><h1>8</h1></div>
-                      <div class="item"><h1>9</h1></div>
-                      <div class="item"><h1>10</h1></div>
-                      <div class="item"><h1>11</h1></div>
-                      <div class="item"><h1>12</h1></div>
-                      <div class="item"><h1>13</h1></div>
-                      <div class="item"><h1>14</h1></div>
-                      <div class="item"><h1>15</h1></div>
-                      <div class="item"><h1>16</h1></div>
+                      <div class="item">
+                        <a class="more-jobs-carousel" href="single-post.php" class="p0">
+                          <!-- <img src=""> -->
+                          <!-- <h5 class="sb-recruiter-name"><i class="fa fa-building"></i> Google</h5> -->
+                          <h6 class="job-title">Strategic Partner Lead, Partner Business Solutions</h6>
+                          <p class="post-tags"><span class="btn btn-xs">Saipem</span><span class="btn btn-xs">Program Management</span><span class="btn btn-xs">Lagos</span></p>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a class="more-jobs-carousel" href="single-post.php" class="p0">
+                          <!-- <img src=""> -->
+                          <!-- <h5 class="sb-recruiter-name"><i class="fa fa-building"></i> Google</h5> -->
+                          <h6 class="job-title">Developer Relations Ecosystem Program Manager, Sub-Saharan Africa</h6>
+                          <p class="post-tags"><span class="btn btn-xs">Saipem</span><span class="btn btn-xs">Program Management</span><span class="btn btn-xs">Lagos</span></p>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a class="more-jobs-carousel" href="single-post.php" class="p0">
+                          <!-- <img src=""> -->
+                          <!-- <h5 class="sb-recruiter-name"><i class="fa fa-building"></i> Google</h5> -->
+                          <h6 class="job-title">Business Intern 2016</h6>
+                          <p class="post-tags"><span class="btn btn-xs">Saipem</span><span class="btn btn-xs">Program Management</span><span class="btn btn-xs">Lagos</span></p>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a class="more-jobs-carousel" href="single-post.php" class="p0">
+                          <!-- <img src=""> -->
+                          <!-- <h5 class="sb-recruiter-name"><i class="fa fa-building"></i> Google</h5> -->
+                          <h6 class="job-title">Marketing Analyst</h6>
+                          <p class="post-tags"><span class="btn btn-xs">Saipem</span><span class="btn btn-xs">Program Management</span><span class="btn btn-xs">Lagos</span></p>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -206,44 +241,63 @@
                 </div>
                 <!-- facebook comments box -->
                 <div class="row m20-top clearfix">
-                  <div class="col-md-12">
+                  <div class="col-md-12 fb-comment">
                     <div class="fb-comments" data-href="http://411jobs.curiouzmind.com/" data-width="100%" data-numposts="5"></div>
                   </div>
                 </div>
               </div>
+              <!-- sidebar panels >>  subscription, ads, top posts, fb plugin-->
               @include('includes.sidebar')
-
   @endsection
 @section('script')
-<script type="text/javascript">
+  <script type="text/javascript">
           // owl carousel for jobs from same employer
           $(document).ready(function() { 
             var owl = $("#owl-demo");         
             owl.owlCarousel({
-                autoPlay: false,
+                autoPlay: true,
                 items : 3, //10 items above 1000px browser width
                 itemsDesktop : [1000,5], //5 items between 1000px and 901px
                 itemsDesktopSmall : [900,3], // betweem 900px and 601px
                 itemsTablet: [600,2], //2 items between 600 and 0
                 itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
             });         
-            // Custom Navigation Events
-            $(".next").click(function(){
-              owl.trigger('owl.next');
-            })
-            $(".prev").click(function(){
-              owl.trigger('owl.prev');
-            })
-            $(".play").click(function(){
-              owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
-            })
-            $(".stop").click(function(){
-              owl.trigger('owl.stop');
-            })         
+            // // Custom Navigation Events
+            // $(".next").click(function(){
+            //   owl.trigger('owl.next');
+            // });
+            // $(".prev").click(function(){
+            //   owl.trigger('owl.prev');
+            // });
+            // $(".play").click(function(){
+            //   owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
+            // });
+            // $(".stop").click(function(){
+            //   owl.trigger('owl.stop');
+            // });         
+          });
+          // owl carousel for jobs @ same role
+          $(document).ready(function() { 
+            var owl = $("#owl-demo2");         
+            owl.owlCarousel({
+                autoPlay: true,
+                items : 3, //10 items above 1000px browser width
+                itemsDesktop : [1000,5], //5 items between 1000px and 901px
+                itemsDesktopSmall : [900,3], // betweem 900px and 601px
+                itemsTablet: [600,2], //2 items between 600 and 0
+                itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+            });                 
           });
           // tooltip
           $(document).ready(function(){
-              $('[data-toggle="tooltip"]').tooltip(); 
+            $('[data-toggle="tooltip"]').tooltip(); 
           });
+          // $(function() {
+          //      var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+          //      $("#nav ul li").each(function(){
+          //           if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
+          //           $(this).addClass("active");
+          //      })
+          // });
       </script>
-  @stop
+@endsection

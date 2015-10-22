@@ -30,7 +30,7 @@
           <div class="panel panel-default">
             <div class="panel-body p20">
               <div class="row">
-                <legend><i class="fa fa-building"></i> Company Name</legend>
+                <legend>Company Name</legend>
                 <label for="company" class="col-lg-2 control-label p0-left hidden"><i class="fa fa-building"></i> Company Name</label>
                 <div class="col-lg-12">
                   {!!Form::select('company', $comp,null,['class'=>'form-control', 'id'=>'comp',
@@ -190,6 +190,8 @@
           // tooltip
           $(document).ready(function(){$('[data-toggle="tooltip"]').tooltip(); });
           // tinymce
+          $(document).ready(function() {
             tinymce.init({selector:'textarea.textArea'});
+          });
   </script>
 @endsection

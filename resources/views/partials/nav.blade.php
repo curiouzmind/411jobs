@@ -30,7 +30,7 @@
                       <li><a href=""><i class="fa fa-facebook"></i></a></li>
                     </ul>
                   </li>
-                  <li class="active"><a href="../help/"><i class="fa fa-home"></i> Home</a>
+                  <li class="active"><a href="/"><i class="fa fa-home"></i> Home</a>
                   </li>
                   <li><a href="">All Jobs</a></li>
                   <li class="dropdown">
