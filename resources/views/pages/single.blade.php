@@ -127,7 +127,7 @@
                         </div>
                         <div class="utils pull-right">
                             <ul class="list-inline">
-                              <li><a href="" class="btn btn-danger btn-sm">Apply for this Job</a></li>
+                              <li><a href="" class="btn btn-primary btn-sm">Apply for this Job</a></li>
                             </ul>
                         </div>
                       </div>
@@ -232,10 +232,10 @@
                 </div>
                 <!-- pager -->
                 <div class="blog-pager clearfix" id="blog-pager">                  
-                  <a class="btn btn-danger pull-right" href="" data-toggle="tooltip" title="Older Post">
+                  <a class="btn btn-primary pull-right" href="" data-toggle="tooltip" title="Older Post">
                   <i class="fa fa-arrow-right"></i>
                   </a>
-                  <a class="home-link btn btn-danger pull-left" href=""data-toggle="tooltip" title="Home">
+                  <a class="home-link btn btn-primary pull-left" href=""data-toggle="tooltip" title="Home">
                   <i class="fa fa-home"></i>
                   </a>
                 </div>

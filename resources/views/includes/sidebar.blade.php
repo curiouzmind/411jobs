@@ -1,7 +1,7 @@
 <!-- sidebar panels >>  subscription, ads, top posts, fb plugin-->
               <div class="col-md-4 content-sidebar">
                 <!-- subscribe panel -->
-                <div class="panel panel-default">
+                <div class="panel panel-plain">
                   <div class="panel-heading"><h5 class="m0">Subscribe for jobs alerts</h5></div>
                   <div class="panel-body">
                     <div class="form-group">
@@ -17,7 +17,7 @@
                   </div>
                 </div>
                 <!-- sidebar AD-Bar1 -->
-                <div class="panel panel-default">
+                <div class="panel panel-plain">
                   <div class="panel-body p0">
                     <div class="ad-bar1">
                       <img class="img-responsive center-block" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=AD-BANNER1-250%C3%97150&w=250&h=150">
@@ -25,7 +25,7 @@
                   </div>
                 </div>
                 <!-- Top / Featured Jobs -->
-                <div class="panel panel-default">
+                <div class="panel panel-plain">
                   <div class="panel-heading"><h5 class="m0">Featured Jobs</h5></div>
                   <div class="">
                     <div class="list-group">
@@ -51,7 +51,7 @@
                   </div>
                 </div>
                 <!-- Facebook Plugin -->
-                <div class="panel panel-default facebook">
+                <div class="panel panel-plain facebook">
                   <div class="panel-body">
                     <div class="fb-plugin">
                       <h4 class="text-center"><i class="fa fa-facebook"></i> | Facebook Plugin</h4>

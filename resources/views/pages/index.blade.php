@@ -5,7 +5,7 @@
 
 @section('sub-title')
   <div class="col-md-12">
-    <h2 class="m0-top">{{ config('blog.title') }}</h2>
+    <h2 class="m0-top blog-title">{{ config('blog.title') }}</h2>
   </div>
 @stop
 @section('content')
@@ -42,7 +42,7 @@
                                   <p class="m0-bttm">{{ str_limit($post->job_descrption) }} </p>
                                 </article>
                       </div>
-                      <div class="card__action">                        
+                      <div class="card__action p0-bttm">                        
                         <div class="card__author pull-left">
                           <img src="http://lorempixel.com/40/40/sports/" alt="user">
                           <div class="card__author-content">
@@ -51,7 +51,7 @@
                         </div>
                         <div class="utils pull-right">
                             <ul class="list-inline">
-                              <li><a href="" class="btn btn-danger btn-sm">Apply</a></li>
+                              <li><a href="" class="btn btn-primary btn-sm">Apply</a></li>
                               <li><a href="" class="btn btn-default btn-sm">Read more</a></li>
                             </ul>
                         </div>
