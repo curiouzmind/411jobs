@@ -101,6 +101,27 @@ a.apply-circle,
  .card__image p.recruiter-name {
  	color: #777;
  }
+ .yellow-light {color: #EFBA00 !important;}
+ .green-light {color: #28A82F !important;}
+ .green-dark {color: #2C894D !important;}
+ .blue-dark {color: #004C8D !important;}
+ .blue-light {color: #4293CC !important;}
+ .red-dark {color: #F11D0E !important;}
+
+ .yellow-light-bg {background-color: #EFBA00 !important;}
+ .green-light-bg {background-color: #28A82F !important;}
+ .green-dark-bg {background-color: #2C894D !important;}
+ .blue-dark-bg {background-color: #004C8D !important;}
+ .blue-light-bg {background-color: #4293CC !important;}
+ .red-dark-bg {background-color: #F11D0E !important;}
+ .yellow-light-bg,
+ .green-light,
+ .green-dark,
+ .blue-dark-bg,
+ .blue-light,
+ .red-dark {
+ 	color: #fff !important;
+ }
  /* THEME ENDS */
 
 /* BODY */
@@ -687,7 +708,7 @@ h3.posts-count span.count {
 }
 h3.posts-count {
 	padding: 50px;
-	background-color: #28A82F;
+	background-color: #EFBA00;
 	color: #fff;
 	font-size: 30px;
 	border-radius: 5px;

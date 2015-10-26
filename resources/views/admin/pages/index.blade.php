@@ -60,9 +60,9 @@
                       <legend>Social Media Stats</legend>
                       <div class="col-md-12">
                       <ul class="list-inline">
-                        <li class="filters-overview"><span><i class="fa fa-facebook"></i></span> 506,000 likes</li>
-                        <li class="filters-overview"><span><i class="fa fa-google-plus"></i></span> 48,000 likes</li>
-                        <li class="filters-overview"><span><i class="fa fa-twitter"></i></span> 3,000 followers</li>
+                        <li class="filters-overview blue-dark-bg"><span><i class="fa fa-facebook"></i></span> 506,000 likes</li>
+                        <li class="filters-overview red-dark-bg"><span><i class="fa fa-google-plus"></i></span> 48,000 likes</li>
+                        <li class="filters-overview blue-light-bg"><span><i class="fa fa-twitter"></i></span> 3,000 followers</li>
                       </ul>
                       </div>
                     </div>
