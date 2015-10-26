@@ -15,7 +15,7 @@
                 <div class="post-card">
                     <div class="row">
                      <div class="col-md-12">
-                      <h3 class="m5-top">{{$post->title}}</h3>
+                      <h3 class="m5-top post-title">{{$post->title}}</h3>
                       <div class="card__action p0-left">                        
                         <div class="card__author pull-left">
                           <img src="http://lorempixel.com/40/40/sports/" alt="user">

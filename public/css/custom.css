@@ -4,6 +4,105 @@
  * 
  */
 
+/* THEME */
+h2.blog-title {
+	/*color: #21AA29;*/
+}
+.btn-primary {
+    color: #FFF;
+    border-color: transparent;
+}
+a {
+	color: #777;
+}
+/* text color - light green */
+h3.post-title,
+.pagination > li > a, 
+.pagination > li > span,
+.pagination > li > a:hover, 
+.pagination > li > span:hover, 
+.pagination > li > a:focus, 
+.pagination > li > span:focus,
+.content-sidebar .panel .list-group a h4,
+.card__article a {
+	color: #28A82F;
+}
+/*hover bg-color - yellow */
+.btn-primary:hover, 
+a.apply-circle:hover,
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus,
+.btn-primary:active {
+    background-color: #EFBA00;
+}
+/* hover color  - yellow */
+a:hover,
+a:focus,
+.card__article a:hover {
+	color: #EFBA00;
+}
+/*background color - deep green*/
+.btn-primary,
+.pagination > .active > a, 
+ .pagination > .active > span, 
+ .pagination > .active > a:hover, 
+ .pagination > .active > span:hover, 
+ .pagination > .active > a:focus, 
+.pagination > .active > span:focus,
+a.apply-circle,
+.header-top-bar {
+	background-color: #2C894D;
+ } 
+
+ .header-top-bar .navbar-header .navbar-brand {
+  	color: #fff !important;
+ }
+ .header-top-bar .navbar-nav li a {
+  	color: rgba(238, 238, 238, 0.84) !important;
+ }
+  .dropdown-menu li a:hover,
+  .dropdown-menu li a:focus {
+	    text-decoration: none;
+	    color: #fff;
+	}
+	.navbar-default .navbar-nav > li > a:hover, 
+	.navbar-default .navbar-nav > li > a:active, 
+	.navbar-default .navbar-nav > li > a:focus {
+	    color: #fff;
+	    background-color: rgb(239, 186, 0);
+		border-top: 2px solid rgb(239, 186, 0);
+	}
+	.navbar-default .navbar-nav > .active > a, 
+	.navbar-default .navbar-nav > .active > a:hover, 
+	.navbar-default .navbar-nav > .active > a:focus {
+		color: #008C33;
+		background-color: #FFF;
+		border-top: 2px solid #008C33;
+	}
+ /* pagination */
+ .pagination > .active > a, 
+ .pagination > .active > span, 
+ .pagination > .active > a:hover, 
+ .pagination > .active > span:hover, 
+ .pagination > .active > a:focus, 
+ .pagination > .active > span:focus {
+	border-color: #2C894D;
+ }
+ .content-sidebar .panel .list-group a p span {
+ 	color: #888;
+ }
+ .card__image {
+	background-color: rgb(255, 255, 255);
+	border-bottom: 1px solid rgb(221, 221, 221);
+ }
+ a.apply-circle {
+	color: #fff !important;
+ }
+ .card__image p.recruiter-name {
+ 	color: #777;
+ }
+ /* THEME ENDS */
+
 /* BODY */
  body {
  	font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -25,18 +124,10 @@ input.form-control {
 }
 input  .form-control:focus {
   /*border-color: #66afe9;*/
-  border-color: #26ADA1;
+  border-color: #28A82F;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
-}
-a {
-	color: #3C5B45;
-}
-a:focus,
-a:hover {
-	/*color: #e51c23;*/
-	color: #26ADA1;
 }
 a:focus {
 	outline: none;
@@ -50,23 +141,9 @@ a:focus {
     background-color: #fff;
     border-bottom: solid 1px #ddd;
 }
-h2.blog-title {
-	color: #608D4E;
-}
-.btn-primary {
-    color: #FFF;
-    background-color: #ABC147;
-    border-color: transparent;
-}
-.btn-primary:hover, 
-.btn-primary:active:hover {
-    background-color: #26ADA1;
-}
  /* top-navigation */
  .header-top-bar {
  	min-height: 40px;
- 	/*background-color: #e51c23;*/
- 	background-color: #26ADA1;
  }
  .header-top-bar .navbar-header .navbar-brand {
  	padding: 10px 15px;
@@ -76,10 +153,6 @@ h2.blog-title {
   	padding: 10px 15px;
   	color: #fff;
   }
-  .header-top-bar .navbar-header .navbar-brand,
-  .header-top-bar .navbar-nav li a {
-  	color: #fff;
-  }
   .header-top-bar .navbar-header .navbar-brand {
   		text-align: center;
   		margin: auto;
@@ -87,36 +160,17 @@ h2.blog-title {
   .navbar-default .navbar-nav > li {
   	font-size: 18px;
   }
+  .navbar-default .navbar-nav > li > a {
+    color: #888;
+  }
+  .navbar-default .navbar-right > li > a:hover {
+    color: #fff !important;
+  }
   @media(max-width: 767px) {
  	.post-cards {
  		margin: 0 15px;
  	}
   }
-  .dropdown-menu li a:hover,
-  .dropdown-menu li a:focus {
-	    text-decoration: none;
-	    color: #fff;
-	    background-color: #608D4E;
-	    /*background-color: #E51C23;*/
-	}
-	.navbar-default .navbar-nav > li > a:hover, 
-	.navbar-default .navbar-nav > li > a:active, 
-	.navbar-default .navbar-nav > li > a:focus {
-	    color: #fff;
-	    /*background-color: #E51C23;*/
-	    background-color: #608D4E;
-	    border-top: solid 2px #608D4E;
-	}
-	.navbar-default .navbar-nav > .active > a, 
-	.navbar-default .navbar-nav > .active > a:hover, 
-	.navbar-default .navbar-nav > .active > a:focus {
-	    /*color: #E51C23;
-		background-color: #fff;
-		border-top: solid 2px #E51C23;*/
-		color: #26ADA1;
-		background-color: #FFF;
-		border-top: 2px solid #26ADA1;
-	}
 
 /* MAIN-CONTENT */
 .main-content {
@@ -139,18 +193,18 @@ h2.blog-title {
  .nav-tabs li.active a, 
  .nav-tabs li.active a:focus {
     border: medium none;
-    box-shadow: 0px -2px 0px #26ADA1 inset;
-    color: #26ADA1;
+    box-shadow: 0px -2px 0px #28A82F inset;
+    color: #28A82F;
  }
  .nav-tabs > li > a:hover, .nav-tabs > li > a:focus:hover {
     background-color: transparent;
-    box-shadow: 0px -2px 0px #26ADA1 inset;
-    color: #26ADA1;
+    box-shadow: 0px -2px 0px #28A82F inset;
+    color: #28A82F;
  }
  .nav-tabs li.active a:hover, 
  .nav-tabs li.active a:focus:hover {
     border: medium none;
-    color: #26ADA1;
+    color: #28A82F;
  }
 
  /*New Post page*/
@@ -170,6 +224,7 @@ h2.blog-title {
  /*Single-Post page*/
  #single-post .post-card-img {
  	height: 100px;
+ 	width: 100%;
  }
  #single-post .post-card-img .card__image p.recruiter-name {
  	padding: 20px 15px;
@@ -186,32 +241,6 @@ h2.blog-title {
     float: right;
     content: "\e114";
 }
-
- /* pagination */
- .pagination > .active > a, 
- .pagination > .active > span, 
- .pagination > .active > a:hover, 
- .pagination > .active > span:hover, 
- .pagination > .active > a:focus, 
- .pagination > .active > span:focus {
- 	/*background-color: #e51c23;
-	border-color: #e51c23;*/
-	background-color: #26ADA1;
-	border-color: #26ADA1;
- }
- .pagination > li > a, 
- .pagination > li > span {
- 	color: #26ADA1;
- 	/*color: #e51c23;*/
- }
- .pagination > li > a:hover, 
- .pagination > li > span:hover, 
- .pagination > li > a:focus, 
- .pagination > li > span:focus {
- 	color: #26ADA1;
- 	/*color: #e51c23;*/
- }
-
  /* Sidebar */
  .subscribe-box {
  	position: sticky;
@@ -223,15 +252,20 @@ h2.blog-title {
  	height: 70px;
  	margin: 4px 0;
  }
+ .content-sidebar .panel .list-group a p.sb-recruiter-name img {
+ 	width: 100%;
+ 	height: 100%;
+ }
  .content-sidebar .panel .list-group a p.sb-recruiter-name {
  	float: left;
 	display: inline-block;
-	background-color: #26ADA1;
+	background-color: #28A82F;
 	color: #fff;
 	height: 69px;
 	width: 69px;
 	margin-right: 10px;
-	padding: 19px 10px;
+	/*padding: 19px 10px;*/
+	border-right: solid 1px #eee;
 	text-align: center;
 	margin-bottom: 0px;
 	line-height: 14px;
@@ -241,7 +275,6 @@ h2.blog-title {
  }
   .content-sidebar .panel .list-group a h4 {
   	font-size: 20px;
-  	color: #608D4E;
   }
   .more-jobs-carousel h5,
   .more-jobs-carousel h6,
@@ -337,6 +370,8 @@ h2.blog-title {
 	}
 	.post-card-img {
 		height: 221px;
+		width: 221px;
+		border-right: solid 1px #eee;
 		overflow: hidden;
 		 -webkit-transition: height 0.6s ease;
 		  -o-transition: height 0.6s ease;
@@ -345,8 +380,6 @@ h2.blog-title {
  
 .card__image {
 	height: 100%;
-	background-color: #26ADA1;
-	/*background-color: #eee;*/
 }
 	.card__image p.recruiter-name {
 		    padding: 61px 45px;
@@ -355,7 +388,6 @@ h2.blog-title {
 		    margin: 0px;
 		    line-height: 1;
 		    text-align: center;
-		    color: #fff;
 	}
 	.card__image img {
 		width: auto;
@@ -365,6 +397,7 @@ h2.blog-title {
 	 @media(max-width: 767px) {
 	 	.post-card-img {
 	 		height: 50px;
+	 		width: 100%;
 	 		 -webkit-transition: height 0.6s ease;
 			  -o-transition: height 0.6s ease;
 			  transition: height 0.6s ease;
@@ -390,14 +423,8 @@ h2.blog-title {
 /* card article */
 .card__article a {
 	text-decoration: none;
-	color: #95A65B;
-	/*color: #444;*/
 	transition: all 0.5s ease;
 }
-	.card__article a:hover {
-		color: #26ADA1;
-		/*color: #2980b9;*/
-	}
 	.card__article h3 {
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -474,11 +501,6 @@ h2.blog-title {
 	.share-toggle.share-expanded:before {
 		content: "\f00d";
 	}
-a.apply-circle {
-	background-color: #ABC147;
-	/*background-color: #E51C23;*/
-	color: #fff !important;
-}
 .apply-circle,
 .like-icon,
 .share-icon {
@@ -665,7 +687,7 @@ h3.posts-count span.count {
 }
 h3.posts-count {
 	padding: 50px;
-	background-color: #26ADA1;
+	background-color: #28A82F;
 	color: #fff;
 	font-size: 30px;
 	border-radius: 5px;
@@ -676,7 +698,7 @@ li.filters-overview span {
 	margin-right: 5px;
 }
 li.filters-overview {
-	background-color: #26ADA1;
+	background-color: #28A82F;
 	color: #FFF;
 	font-size: 23px;
 	padding-left: 0px;

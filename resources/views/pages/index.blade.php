@@ -5,21 +5,20 @@
 
 @section('sub-title')
   <div class="col-md-12">
-    <h2 class="m0-top blog-title">{{ config('blog.title') }}</h2>
+    <h3 class="m0-top blog-title">{{ config('blog.title') }}</h3>
   </div>
 @stop
 @section('content')
 <div class="col-md-8 post-cards">
-  <h5>Page {{ $posts->currentPage() }} of {{ $posts->lastPage() }}</h5>
-                <!-- post-card 1 -->
+                  <!-- post-card 1 -->
                 @foreach ($posts as $post)
                 <div class="post-card">
                     <div class="card radius shadowDepth1 row">
                      <!-- post-card image -->
                      <div class="col-md-4 p0 post-card-img">
                       <div class="card__image border-tlr-radius">
-                        <!-- <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">-->
-                        <p class="recruiter-name"><i class="fa fa-building"></i> Google</p>
+                         <img src="{{asset('img/googlelogo.png')}}" alt="image" class="border-tlr-radius">
+                        <!-- <p class="recruiter-name"><i class="fa fa-building"></i> Google</p> -->
                       </div>
                      </div>
                      <!-- post-card content -->
@@ -60,7 +59,12 @@
                     </div>
                 </div>
               @endforeach
-              {!! $posts->render() !!}
+              <div class="row">
+                <div class="col-md-3 pull-left pagination">
+                  <h5>Page {{ $posts->currentPage() }} of {{ $posts->lastPage() }}</h5>
+                </div>
+                <div class="col-md-9 pull-right">{!! $posts->render() !!}</div>
+              </div>
                 
               </div>
               @include('includes.sidebar')

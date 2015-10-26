@@ -43,7 +43,7 @@
         
           <!--  main-content-->
           <div class="main-content">
-            <div class="row p10-bttm">  
+            <div class="row p10-bttm m20-bttm">  
               @yield('sub-title')
       
             </div>

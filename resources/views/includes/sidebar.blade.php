@@ -30,20 +30,20 @@
                   <div class="">
                     <div class="list-group">
                       <a href="#" class="list-group-item p0">
-                        <!-- <img src=""> -->
-                        <p class="sb-recruiter-name"><i class="fa fa-building"></i> Google</p>
+                        <p class="sb-recruiter-name"><img src="{{asset('img/googlelogo.png')}}" alt="image" class=""></p>
+                        <!-- <p class="sb-recruiter-name"><i class="fa fa-building"></i> Google</p> -->
                         <h4 class="list-group-item-heading">Developer Relations Ecosystem Program Manager, Sub-Saharan Africa</h4>
                         <p class="post-tags"><span class="btn btn-xs">Google</span><span class="btn btn-xs">Program Management</span><span class="btn btn-xs">Lagos</span></p>
                       </a>
                       <a href="#" class="list-group-item p0">
-                        <!-- <img src=""> -->
-                        <p class="sb-recruiter-name"><i class="fa fa-building"></i> Saipem</p>
+                        <p class="sb-recruiter-name"><img src="{{asset('img/saipem.jpg')}}" alt="image" class=""></p>
+                        <!-- <p class="sb-recruiter-name"><i class="fa fa-building"></i> Saipem</p> -->
                         <h4 class="list-group-item-heading">Contract Administrator</h4>
                         <p class="post-tags"><span class="btn btn-xs">Saipem</span><span class="btn btn-xs">Oil & Gas</span><span class="btn btn-xs">Lagos</span></p>
                       </a>
                       <a href="#" class="list-group-item p0">
-                        <!-- <img src=""> -->
-                        <p class="sb-recruiter-name"><i class="fa fa-building"></i> Google</p>
+                        <p class="sb-recruiter-name"><img src="{{asset('img/googlelogo.png')}}" alt="image" class=""></p>
+                        <!-- <p class="sb-recruiter-name"><i class="fa fa-building"></i> Google</p> -->
                         <h4 class="list-group-item-heading">Developer Relations Ecosystem Program Manager, Sub-Saharan Africa</h4>
                         <p class="post-tags"><span class="btn btn-xs">Google</span><span class="btn btn-xs">Program Management</span><span class="btn btn-xs">Lagos</span></p>
                       </a>
